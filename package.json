@@ -20,6 +20,7 @@
     "nodemon": "^2.0.2"
   },
   "dependencies": {
-    "concurrently": "^5.0.2"
+    "concurrently": "^5.0.2",
+    "cors": "^2.8.5"
   }
 }

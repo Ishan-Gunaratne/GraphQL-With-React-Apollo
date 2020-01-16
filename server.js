@@ -1,8 +1,10 @@
 const express = require("express");
 const garphQLHTTP = require("express-graphql");
 const schema = require("./schema");
+const cors = require("cors");
 const axios = require("axios");
 const app = express();
+
 const resolvers = {
   launches: () => {
     return axios
@@ -10,7 +12,7 @@ const resolvers = {
       .then(res => res.data);
   }
 };
-
+app.use(cors());
 app.use(
   "/graphql",
   garphQLHTTP({
